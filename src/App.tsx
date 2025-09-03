@@ -30,7 +30,7 @@ function App() {
       <header className="border-b border-neutral-800/50 backdrop-blur-sm bg-neutral-950/80 sticky top-0 z-50">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-3 group">
+            <a href="/" className="flex items-center space-x-3 group">
               <div className="relative w-8 h-8 flex items-center justify-center">
                 <div className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500/20 to-violet-500/20 blur-md scale-150 group-hover:scale-175 transition-transform duration-300"></div>
                 <div className="absolute inset-0 rounded-full bg-purple-500/10 animate-pulse"></div>
@@ -38,7 +38,7 @@ function App() {
               </div>
               <span className="text-heading-md font-semibold text-white">unping-ui</span>
               <span className="px-2 py-1 text-xs bg-neutral-800 text-neutral-300 rounded-full">v0.1.6</span>
-            </div>
+            </a>
             <nav className="hidden md:flex items-center space-x-8">
               <a href="#install" className="text-body-md text-neutral-300 hover:text-white transition-colors">Install</a>
               <a href="https://widgetbook.unping-ui.com" target="_blank" rel="noreferrer" className="text-body-md text-neutral-300 hover:text-white transition-colors">Widgetbook</a>
