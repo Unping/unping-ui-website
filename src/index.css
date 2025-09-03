@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Unping-UI color system mapped to CSS variables */
+    --background: 0 0% 100%; /* white */
+    --foreground: 0 0% 3.9%; /* neutral900 */
+    --card: 0 0% 100%; /* white */
+    --card-foreground: 0 0% 3.9%; /* neutral900 */
+    --popover: 0 0% 100%; /* white */
+    --popover-foreground: 0 0% 3.9%; /* neutral900 */
+    --primary: 0 0% 9%; /* primary600 */
+    --primary-foreground: 0 0% 98%; /* white */
+    --secondary: 0 0% 96.1%; /* neutral100 */
+    --secondary-foreground: 0 0% 9%; /* neutral600 */
+    --muted: 0 0% 96.1%; /* neutral50 */
+    --muted-foreground: 0 0% 45.1%; /* neutral500 */
+    --accent: 0 0% 96.1%; /* neutral100 */
+    --accent-foreground: 0 0% 9%; /* neutral700 */
+    --destructive: 0 84.2% 60.2%; /* error600 */
+    --destructive-foreground: 0 0% 98%; /* white */
+    --border: 0 0% 89.8%; /* neutral200 */
+    --input: 0 0% 89.8%; /* neutral200 */
+    --ring: 0 0% 3.9%; /* primary600 */
+    --radius: 0.5rem; /* UiRadius.sm */ --chart-1: 12 76% 61%; --chart-2: 173 58% 39%; --chart-3: 197 37% 24%; --chart-4: 43 74% 66%; --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    /* Dark mode using darker neutral colors */
+    --background: 0 0% 3.9%; /* neutral950 */
+    --foreground: 0 0% 98%; /* neutral50 */
+    --card: 0 0% 3.9%; /* neutral800 */
+    --card-foreground: 0 0% 98%; /* neutral50 */
+    --popover: 0 0% 3.9%; /* neutral800 */
+    --popover-foreground: 0 0% 98%; /* neutral50 */
+    --primary: 0 0% 98%; /* primary400 */
+    --primary-foreground: 0 0% 9%; /* neutral950 */
+    --secondary: 0 0% 14.9%; /* neutral700 */
+    --secondary-foreground: 0 0% 98%; /* neutral50 */
+    --muted: 0 0% 14.9%; /* neutral700 */
+    --muted-foreground: 0 0% 63.9%; /* neutral400 */
+    --accent: 0 0% 14.9%; /* neutral700 */
+    --accent-foreground: 0 0% 98%; /* neutral50 */
+    --destructive: 0 62.8% 30.6%; /* error500 */
+    --destructive-foreground: 0 0% 98%; /* neutral50 */
+    --border: 0 0% 14.9%; /* neutral700 */
+    --input: 0 0% 14.9%; /* neutral700 */
+    --ring: 0 0% 83.1%; /* primary300 */ --chart-1: 220 70% 50%; --chart-2: 160 60% 45%; --chart-3: 30 80% 55%; --chart-4: 280 65% 60%; --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-outfit;
+  }
+}
+
+@layer utilities {
+  /* Color utilities for Unping-UI colors */
+  .text-primary {
+    @apply text-primary-600;
+  }
+  .bg-primary {
+    @apply bg-primary-600;
+  }
+  .border-primary {
+    @apply border-primary-600;
+  }
+  
+  /* Surface utilities */
+  .surface-primary {
+    @apply bg-primary-50 text-primary-900 border-primary-200;
+  }
+  .surface-success {
+    @apply bg-success-50 text-success-900 border-success-200;
+  }
+  .surface-warning {
+    @apply bg-warning-50 text-warning-900 border-warning-200;
+  }
+  .surface-error {
+    @apply bg-error-50 text-error-900 border-error-200;
+  }
+  
+  /* Shadow utilities matching Unping-UI design */
+  .shadow-sm-unping {
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  }
+  .shadow-md-unping {
+    box-shadow: 0px 4px 8px -2px rgba(16, 24, 40, 0.1), 0px 2px 4px -2px rgba(16, 24, 40, 0.06);
+  }
+  .shadow-lg-unping {
+    box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03);
+  }
+  .shadow-xl-unping {
+    box-shadow: 0px 20px 24px -4px rgba(16, 24, 40, 0.08), 0px 8px 8px -4px rgba(16, 24, 40, 0.03);
+  }
+}
+
+
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
