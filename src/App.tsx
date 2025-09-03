@@ -148,7 +148,7 @@ function App() {
       )}
 
       {/* Footer */}
-      <footer className="border-t border-neutral-800/50 py-8">
+      <footer className="border-t border-neutral-800/50 backdrop-blur-sm bg-neutral-950/80 py-8">
         <div className="container mx-auto px-6">
           <div className="flex items-center justify-between">
             <p className="text-body-sm text-neutral-500">
