@@ -2,7 +2,7 @@ import { Button } from './components/ui/button'
 import { Card, CardDescription, CardHeader, CardTitle } from './components/ui/card'
 import { Alert, AlertDescription, AlertTitle } from './components/ui/alert'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './components/ui/tabs'
-import { Terminal, Star } from 'lucide-react'
+import { Terminal } from 'lucide-react'
 import { Toaster } from './components/ui/sonner'
 import { DotBackground } from './components/ui/dot-background'
 import { ContainerTextFlip } from './components/ui/container-text-flip'
@@ -40,15 +40,8 @@ function App() {
               <span className="px-2 py-1 text-xs bg-neutral-800 text-neutral-300 rounded-full">v0.1.6</span>
             </a>
             <nav className="hidden md:flex items-center space-x-8">
-              <a href="#install" className="text-body-md text-neutral-300 hover:text-white transition-colors">Install</a>
               <a href="https://widgetbook.unping-ui.com" target="_blank" rel="noreferrer" className="text-body-md text-neutral-300 hover:text-white transition-colors">Widgetbook</a>
               <a href="https://github.com/unping/unping-ui" target="_blank" rel="noreferrer" className="text-body-md text-neutral-300 hover:text-white transition-colors">GitHub</a>
-              <Button asChild variant="ghost" size="sm" className="text-neutral-300 hover:text-white">
-                <a href="https://github.com/unping/unping-ui" target="_blank" rel="noreferrer" className="inline-flex items-center">
-                  <Star className="w-4 h-4 mr-1" />
-                  Star
-                </a>
-              </Button>
             </nav>
           </div>
         </div>
@@ -61,18 +54,13 @@ function App() {
               <div className="space-y-8">
                 <div className="space-y-6">
                   <h1 className="text-display-xl lg:text-display-2xl font-bold text-white leading-tight">
-                    Make <ContainerTextFlip words={["beautiful", "asdf", "test2"]} /> Flutter apps
-                    <br />regardless of your design experience.
+                    <ContainerTextFlip words={["Web", "Desktop"]} /> first Flutter UI library.
                   </h1>
                   <p className="text-body-xl text-neutral-300 max-w-xl leading-relaxed">
-                    Beautiful, fast and modern Flutter UI library for building accessible 
-                    and customizable mobile applications.
+                    Use Unping-UI directly or use it as a foundation to build your own highly configurable component library.
                   </p>
                 </div>
                 <div className="flex items-center gap-4">
-                  <Button asChild size="lg" className="bg-primary-600 hover:bg-primary-700 text-white px-8 py-4 rounded-lg font-medium">
-                    <a href="#install">Get Started →</a>
-                  </Button>
                   <Button asChild variant="secondary" size="lg" className="px-6">
                     <a href="https://widgetbook.unping-ui.com" target="_blank" rel="noreferrer">Widgetbook</a>
                   </Button>
