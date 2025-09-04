@@ -1,5 +1,3 @@
-import React from 'react'
-
 export default function Imprint() {
   return (
     <section className="relative min-h-[90vh] flex items-center overflow-hidden">
