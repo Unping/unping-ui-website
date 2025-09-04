@@ -77,7 +77,7 @@ function App() {
                     <CardDescription className="text-neutral-400">Choose your preferred method to get started.</CardDescription>
                     <div className="mt-6">
                       <Alert className="bg-neutral-800 border-neutral-700">
-                        <AlertTitle className="text-white">Friendly for juniors</AlertTitle>
+                        <AlertTitle className="text-white">1-Click install or shadcn style</AlertTitle>
                         <AlertDescription className="text-neutral-300">
                           We keep the setup simple. Follow one of the tabs below and youll be up and running fast.
                         </AlertDescription>
@@ -107,7 +107,7 @@ function App() {
                           <div className="rounded-md bg-neutral-900 border border-neutral-800 p-4">
                             <div className="flex items-center gap-2 text-neutral-300">
                               <Terminal className="w-4 h-4" />
-                              <code className="text-sm font-mono">fpx add unping-ui</code>
+                              <code className="text-sm font-mono">flutter pub global activate fpx && fpx repository add --url https://github.com/unping/unping-ui --name unping-ui</code>
                             </div>
                           </div>
                         </TabsContent>
