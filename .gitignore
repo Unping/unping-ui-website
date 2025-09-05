@@ -42,4 +42,4 @@ tmp/
 temp/
 
 # Hide appwrite.config.json
-appwrite.config.json
+appwrite.json
