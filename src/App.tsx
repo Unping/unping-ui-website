@@ -46,6 +46,7 @@ function App() {
             </a>
             <nav className="hidden md:flex items-center space-x-8">
               <a href="https://widgetbook.unping-ui.com" target="_blank" rel="noreferrer" className="text-body-md text-neutral-300 hover:text-white transition-colors">Widgetbook</a>
+              <a href="https://www.figma.com/community/file/1545817431010952080" target="_blank" rel="noreferrer" className="text-body-md text-neutral-300 hover:text-white transition-colors">Figma</a>
               <a href="https://github.com/unping/unping-ui" target="_blank" rel="noreferrer" className="text-body-md text-neutral-300 hover:text-white transition-colors">GitHub</a>
             </nav>
           </div>
