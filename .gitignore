@@ -40,3 +40,6 @@ Thumbs.db
 # Temporary folders
 tmp/
 temp/
+
+# Hide appwrite.config.json
+appwrite.config.json
