@@ -9,9 +9,14 @@ import { ContainerTextFlip } from './components/ui/container-text-flip'
 import { GlowingEffect } from './components/ui/glowing-effect'
 import React from 'react'
 import Imprint from './pages/Imprint'
+import { usePageTracking } from './hooks/usePostHog'
+import { CookieConsentBanner } from './components/consent/CookieConsentBanner'
 
 function App() {
   const [route, setRoute] = React.useState<string>(() => window.location.hash || '#/')
+  
+  // Track page views automatically (only when consent is given)
+  usePageTracking()
 
   React.useEffect(() => {
     const onHashChange = () => setRoute(window.location.hash || '#/')
@@ -147,6 +152,9 @@ function App() {
         </div>
       </footer>
       </div>
+      
+      {/* Cookie Consent Banner */}
+      <CookieConsentBanner />
     </div>
   )
 }
