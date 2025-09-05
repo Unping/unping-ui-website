@@ -132,7 +132,6 @@ Visit `http://localhost:5173` to see the website!
 │   └── index.css          # Global styles with design tokens
 ├── public/                # Static assets (icons, manifest)
 ├── appwrite.json         # Appwrite project configuration
-├── deploy.sh            # Deployment script
 └── README.md
 ```
 │   ├── App.tsx           # Main application component
@@ -226,17 +225,12 @@ npm run preview
 
 The built files will be in the `dist/` directory.
 
-### Quick Deploy Script
-
-Use the included deployment script:
-
-```bash
-./deploy.sh
-```
-
 ### Deployment Options
 
-#### Vercel (Recommended)
+#### Appwrite (Current Hosting)
+The website is currently hosted on Appwrite. Deployment is automated via GitHub Actions when pushing to the main branch.
+
+#### Vercel
 ```bash
 npm install -g vercel
 vercel
@@ -246,12 +240,6 @@ vercel
 ```bash
 npm run build
 # Upload dist/ folder to Netlify
-```
-
-#### GitHub Pages
-```bash
-npm run build
-# Push dist/ contents to gh-pages branch
 ```
 
 #### Custom Server
