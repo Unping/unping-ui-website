@@ -1,50 +1,42 @@
-name: Deploy to GitHub Pages
+name: Deploy to Appwrite
 
 on:
   push:
     branches: [ main ]
   workflow_dispatch:
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
-
 jobs:
-  build-and-deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  appwrite-deployment:
     runs-on: ubuntu-latest
-    
     steps:
-    - name: Checkout
-      uses: actions/checkout@v4
-      
-    - name: Setup Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: '18'
-        cache: 'npm'
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+          ref: ${{ github.head_ref || github.ref_name }}
+
+      - name: Create Appwrite config
+        run: echo '${{ secrets.APPWRITE_CONFIG }}' > appwrite.config.json
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: '24'
+
+      - name: Install Appwrite CLI
+        run: npm install -g appwrite-cli
+
+      - name: Install dependencies
+        run: npm ci
         
-    - name: Install dependencies
-      run: npm ci
+      - name: Build
+        run: npm run build
       
-    - name: Build
-      run: npm run build
-      
-    - name: Setup Pages
-      uses: actions/configure-pages@v4
-      
-    - name: Upload artifact
-      uses: actions/upload-pages-artifact@v3
-      with:
-        path: './dist'
-        
-    - name: Deploy to GitHub Pages
-      id: deployment
-      uses: actions/deploy-pages@v4
+      - name: Copy files from build directory to appwrite webserver
+        run: rsync -av ./dist/ sites/unping-ui.com/
+
+      - name: Authenticate with Appwrite
+        run: appwrite client --endpoint https://cloud.appwrite.io/v1 --project-id "${{ secrets.APPWRITE_PROJECT_ID }}" --key "${{ secrets.APPWRITE_API_KEY_GITHUB_ACTION_DEPLOYMENT_PROD }}"
+
+      - name: Push all sites to appwrite
+        run: appwrite push sites --all --force
