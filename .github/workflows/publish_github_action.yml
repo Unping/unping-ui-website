@@ -26,15 +26,6 @@ jobs:
       - name: Install Appwrite CLI
         run: npm install -g appwrite-cli
 
-      - name: Install dependencies
-        run: npm ci
-        
-      - name: Build
-        run: npm run build
-      
-      - name: Copy files from build directory to appwrite webserver
-        run: rsync -av ./dist/ sites/unping-ui.com/
-
       - name: Authenticate with Appwrite
         run: appwrite client --endpoint https://cloud.appwrite.io/v1 --project-id "${{ secrets.APPWRITE_PROJECT_ID }}" --key "${{ secrets.APPWRITE_API_KEY_GITHUB_ACTION_DEPLOYMENT_PROD }}"
 
