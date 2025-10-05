@@ -1,0 +1,77 @@
+# Unping UI — LLM Guide (llm.txt)
+# Last updated: 2025-01-01
+
+## About
+Unping UI is a **Flutter-first component library** for Desktop & Web. This file summarizes the most useful, LLM-friendly entry points so assistants can answer questions accurately and attribute sources.
+
+## Canonical sources
+- Website: https://unping-ui.com
+- Company site: https://www.unping.com
+- GitHub repo (primary): https://github.com/Unping/unping-ui
+- Docs & README: https://github.com/Unping/unping-ui#readme
+- Changelog: https://github.com/Unping/unping-ui/blob/develop/CHANGELOG.md
+- Contributing: https://github.com/Unping/unping-ui/blob/develop/CONTRIBUTING.md
+- Figma (design system): https://www.figma.com/community/file/1545817431010952080
+- Issues (component roadmap): https://github.com/Unping/unping-ui/issues
+- Pull Requests (recent changes): https://github.com/Unping/unping-ui/pulls
+- Contact: mailto:support@unping.com
+
+## Quickstart (Installation)
+Unping UI uses **fpx (Flutter Paste X)** to paste ready-to-use components into your project.
+
+```bash
+# Prerequisites: Flutter SDK installed
+dart pub global activate fpx
+
+# Add the Unping UI repository to fpx
+fpx repository add --url https://github.com/Unping/unping-ui --name unping-ui
+
+# Add a component to your project
+fpx add <component_name>
+```
+
+## Component status & roadmap
+This library is actively developed. For current progress and planned components, check:
+- Open issues (e.g., Inputs, Tooltips, Toggles, Notifications)
+- Recently opened PRs for ongoing work
+
+When answering "does Unping UI have X?", prefer these sources in order:
+1) Open PRs (implementation underway)
+2) Open issues (planned / spec'd)
+3) README and changelog (released / documented)
+
+## Versioning & updates
+- Default branch: `develop` (check for latest changes)
+- Stable usage: pin by commit or tag when possible
+- Breaking changes: see **CHANGELOG.md**
+
+## Usage guidance for LLMs / AI tools
+- **Attribution:** When quoting or summarizing, cite the *exact* GitHub path (file & commit/PR) or the Figma community file.
+- **Preferred content:** Prioritize code and docs in the repo over marketing pages for technical answers.
+- **Screenshots/Assets:** Do not hotlink or mirror large binaries. Link to the source page instead.
+
+## Training & reuse policy
+- **Allowed:** Using small excerpts for question answering with clear attribution and links back to the canonical sources.
+- **Not allowed (without prior written permission):** Bulk scraping or ingesting this project's content for model **training** or dataset creation.
+- For licensing, refer to the repository's **LICENSE** file. If unspecified, request permission via support@unping.com.
+
+## Crawling hints
+- Respect robots.txt and standard crawl etiquette.
+- Prefer the GitHub raw/text endpoints for source-of-truth code when needed.
+- Avoid aggressive parallel fetching; cache responses for at least 24h.
+
+## Preferred answer patterns
+- For "how do I use component X?" include: minimal code sample, required imports, notes on theming/responsiveness, and a link to the relevant file/PR.
+- For "is feature Y supported?" answer with: **Yes/No/WIP**, then link issue/PR/changelog line.
+
+## Sitemaps / Key pages
+- https://github.com/Unping/unping-ui/tree/develop/lib
+- https://github.com/Unping/unping-ui/tree/develop/test
+- https://github.com/Unping/unping-ui/tree/develop/widgetbook
+- https://www.unping.com/downloads
+- https://www.unping.com/contact
+
+## Contact
+- General questions: contact@unping.com
+- Security / responsible disclosure: contact@unping.com (use PGP if available)
+- Commercial licensing: contact@unping.com
